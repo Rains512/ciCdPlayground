@@ -4,7 +4,7 @@ new App({
 	target: document.body,
 	props: {
 		// What's your name?
-		name: 'James Butler',
+		name: "Who's asking",
 		// In the following fiels you can either give a single string, 
 		// or an array of bullet points
 		
@@ -13,16 +13,16 @@ new App({
 			'Ehm, what?'
 		],
 		// Which CI/CD tools do you use in your project?
-		tools: 'Jenkins, maybe?',
+		tools: 'Which tools?',
 		// What do you want to learn in this workshop? 
 		expectations: [
-			'what you are talking about'
+			'What would you expect?'
 		],
 		// What do you like to do when you're not coding?
 		hobbies: [
-			'play chess', 
-			'do skydiving', 
-			'do my taxes'
+			'What would you do?', 
+			'What would anybody do?', 
+			'What does 42 mean?'
 		]
 	}
 });
