@@ -14,7 +14,6 @@ pipeline {
         stage('test') {
             steps {
                 sh 'yarn test'
-                junit testResults: '**/reports/**/*.xml', allowEmptyResults: true
             }
         }
 
@@ -27,7 +26,6 @@ pipeline {
         stage('E2E') {
             steps {
                 sh 'yarn test:e2e'
-                junit testResults: '**/reports/**/*.xml', allowEmptyResults: true
             }
         }
 
@@ -54,6 +52,12 @@ pipeline {
                     pluginFailureResultConstraint: 'FAILURE', 
                     profileName: 'role-based-access', 
                     userMetadata: []
+            }
+        }
+
+        post {
+            always {
+                junit '**/reports/**/*.xml'
             }
         }
     }
